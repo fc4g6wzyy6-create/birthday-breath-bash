@@ -106,10 +106,10 @@ function Index() {
           sum += v * v;
         }
         const rms = Math.sqrt(sum / buf.length);
-        // A real blow into the mic spikes the volume well past this level.
-        if (rms > 0.09) {
-          blowRef.current += dt;
-          const needed = 0.45 * (CANDLE_COUNT - litRef.current) + 0.45;
+        // Very sensitive: normal talking or a soft breath is enough.
+        if (rms > 0.018) {
+          blowRef.current += dt * 2.2;
+          const needed = 0.3 * (CANDLE_COUNT - litRef.current) + 0.15;
           if (blowRef.current >= needed) extinguishOne();
         }
       };
