@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import cake from "@/assets/cake.png";
-import photoTrain from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31.jpeg.asset.json";
+import photoTrain from "@/assets/train-orig.jpg.asset.json";
 import photoHarbor from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_3.jpeg.asset.json";
 import photoGlasses from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_1.jpeg.asset.json";
 
