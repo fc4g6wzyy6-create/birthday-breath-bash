@@ -40,8 +40,7 @@ function Index() {
   );
 
   const litRef = useRef(CANDLE_COUNT);
-  const blowRef = useRef(0);
-  const lastTsRef = useRef(0);
+  const lastBlowRef = useRef(0);
   const rafRef = useRef(0);
   const streamRef = useRef<MediaStream | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -87,30 +86,31 @@ function Index() {
       streamRef.current = stream;
       const ctx = new AudioContext();
       audioCtxRef.current = ctx;
+      await ctx.resume();
       const source = ctx.createMediaStreamSource(stream);
       const analyser = ctx.createAnalyser();
-      analyser.fftSize = 1024;
+      analyser.fftSize = 512;
+      analyser.smoothingTimeConstant = 0.15;
       source.connect(analyser);
       const buf = new Uint8Array(analyser.fftSize);
       setMicState("on");
-      lastTsRef.current = performance.now();
       const tick = () => {
         rafRef.current = requestAnimationFrame(tick);
         const now = performance.now();
-        const dt = Math.min((now - lastTsRef.current) / 1000, 0.1);
-        lastTsRef.current = now;
         analyser.getByteTimeDomainData(buf);
         let sum = 0;
+        let peak = 0;
         for (let i = 0; i < buf.length; i++) {
           const v = ((buf[i] ?? 128) - 128) / 128;
           sum += v * v;
+          peak = Math.max(peak, Math.abs(v));
         }
         const rms = Math.sqrt(sum / buf.length);
-        // Very sensitive: normal talking or a soft breath is enough.
-        if (rms > 0.018) {
-          blowRef.current += dt * 2.2;
-          const needed = 0.3 * (CANDLE_COUNT - litRef.current) + 0.15;
-          if (blowRef.current >= needed) extinguishOne();
+        // Direct, very sensitive voice detection. The cooldown prevents one
+        // sound frame from extinguishing every candle at the same instant.
+        if ((rms > 0.006 || peak > 0.025) && now - lastBlowRef.current > 360) {
+          lastBlowRef.current = now;
+          extinguishOne();
         }
       };
       tick();
