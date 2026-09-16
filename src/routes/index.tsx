@@ -102,7 +102,7 @@ function Index() {
         analyser.getByteTimeDomainData(buf);
         let sum = 0;
         for (let i = 0; i < buf.length; i++) {
-          const v = (buf[i] - 128) / 128;
+          const v = ((buf[i] ?? 128) - 128) / 128;
           sum += v * v;
         }
         const rms = Math.sqrt(sum / buf.length);
