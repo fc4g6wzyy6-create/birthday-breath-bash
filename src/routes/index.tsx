@@ -120,12 +120,11 @@ function Index() {
   }, [extinguishOne, stage]);
 
   useEffect(() => {
-    if (stage === "celebrating") {
-      const t = window.setTimeout(() => {
-        revealRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 500);
-      return () => window.clearTimeout(t);
-    }
+    if (stage !== "celebrating") return undefined;
+    const t = window.setTimeout(() => {
+      revealRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 500);
+    return () => window.clearTimeout(t);
   }, [stage]);
 
   useEffect(() => stopMic, [stopMic]);
