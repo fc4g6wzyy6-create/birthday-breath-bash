@@ -1,3 +1,4 @@
 # Roadmap
 
-- [ ] Background song on app open — CAS "Sweet" requested; can't ship copyrighted audio, so making a dreamy CAS-style instrumental instead (or wire in a user-uploaded MP3)
+- [x] Background song on app open — soft dreamy loop starts on first tap, mute toggle added
+- [ ] (Waiting on you) Upload the "Sweet" MP3 file here and I'll swap it in as the song
