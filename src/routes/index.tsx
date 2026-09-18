@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import cake from "@/assets/cake.png";
+import birthdaySong from "@/assets/birthday-song.mp3";
 import photoTrain from "@/assets/train-orig.jpg.asset.json";
 import photoHarbor from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_3.jpeg.asset.json";
 import photoGlasses from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_1.jpeg.asset.json";
@@ -47,6 +48,29 @@ function Index() {
   const streamRef = useRef<MediaStream | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const revealRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [muted, setMuted] = useState(false);
+
+  const startSong = useCallback(() => {
+    if (audioRef.current) return;
+    const audio = new Audio(birthdaySong);
+    audio.loop = true;
+    audio.volume = 0.35;
+    audioRef.current = audio;
+    audio.play().catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("pointerdown", startSong, { once: true });
+    return () => window.removeEventListener("pointerdown", startSong);
+  }, [startSong]);
+
+  const toggleMute = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.muted = !audio.muted;
+    setMuted(audio.muted);
+  }, []);
 
   const stopMic = useCallback(() => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
