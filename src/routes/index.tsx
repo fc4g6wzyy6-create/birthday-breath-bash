@@ -161,6 +161,16 @@ function Index() {
     <main className="min-h-screen bg-paper text-ink overflow-x-hidden">
       {stage === "celebrating" && <ConfettiCanvas />}
 
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={muted ? "Turn the song on" : "Mute the song"}
+        className="fixed bottom-5 right-5 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/80 text-sm shadow-sm backdrop-blur transition-transform hover:scale-105 active:scale-95"
+      >
+        {muted ? "\u{1F507}" : "\u{1F3B5}"}
+      </button>
+
+
       <div className="mx-auto max-w-md px-6 pt-12 pb-16">
         {/* ---------- Stage 1: the cake & the wish ---------- */}
         <section
