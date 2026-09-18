@@ -4,6 +4,8 @@ import cake from "@/assets/cake.png";
 import photoTrain from "@/assets/train-orig.jpg.asset.json";
 import photoHarbor from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_3.jpeg.asset.json";
 import photoGlasses from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_1.jpeg.asset.json";
+import photoCamera from "@/assets/birthday-photo-4.jpeg.asset.json";
+import photoPortrait from "@/assets/birthday-photo-5.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -241,12 +243,33 @@ function Index() {
                 <h2 className="font-script text-5xl italic leading-tight text-coral">
                   Happy Birthday, My Love
                 </h2>
-                <p className="mx-auto mt-6 max-w-[34ch] text-lg leading-relaxed text-pretty text-ink/70">
-                  The world got so much brighter the day you were born. I hope
-                  today feels as magic as you make every ordinary day feel.
-                  Here's to you, and to every wish we still get to make
-                  together.
-                </p>
+                <div className="mx-auto mt-7 max-w-[35ch] space-y-5 text-base leading-8 text-pretty text-ink/70">
+                  <p>
+                    Happy birthday to the most beautiful and amazing girl in
+                    my world. I hope today reminds you of just how special you
+                    are, not only to me, but to everyone lucky enough to know
+                    your heart.
+                  </p>
+                  <p>
+                    You make the ordinary moments feel unforgettable. Every
+                    laugh, every conversation, every little adventure, and even
+                    the quiet moments mean so much more simply because they are
+                    with you. You bring a kind of happiness into my life that I
+                    never knew I was missing.
+                  </p>
+                  <p>
+                    I hope this new year of your life brings you everything
+                    your heart wishes for: beautiful memories, big dreams
+                    coming true, endless reasons to smile, and all the love you
+                    deserve. No matter where life takes us, I will always be
+                    grateful that I get to know you, love you, and cheer for
+                    you through it all.
+                  </p>
+                  <p className="font-display text-lg italic text-ink/80">
+                    Today is all about you, my love. Happy birthday — I love you
+                    more than words could ever properly say.
+                  </p>
+                </div>
               </section>
 
               {/* The photo strip */}
@@ -271,6 +294,20 @@ function Index() {
                   caption="My favorite view, always"
                   rotateClass="rotate-[-1deg]"
                   delay="0.3s"
+                />
+                <Polaroid
+                  src={photoCamera.url}
+                  alt="A playful security-camera photo"
+                  caption="Even the candid moments are perfect"
+                  rotateClass="rotate-[2deg]"
+                  delay="0.45s"
+                />
+                <Polaroid
+                  src={photoPortrait.url}
+                  alt="A beautiful portrait at home"
+                  caption="The prettiest girl in every room"
+                  rotateClass="rotate-[-2deg]"
+                  delay="0.6s"
                 />
               </section>
 
