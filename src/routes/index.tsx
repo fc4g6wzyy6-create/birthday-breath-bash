@@ -306,6 +306,17 @@ function Index() {
                     grateful that I get to know you, love you, and cheer for
                     you through it all.
                   </p>
+                  <p>
+                    I just wanna say how lucky I am to have you in my life. You
+                    really mean so much to me and I'm so grateful for
+                    everything we've been through together. I hope you have the
+                    best birthday ever and that this year brings you everything
+                    you want and deserve. I'm really happy that I get to be
+                    with you and make all these memories together, and I hope
+                    we have a really good future together and keep growing and
+                    being there for each other. I FRICKING LOVEEEEEEEEEE YOU so
+                    much baby, happy birthday TO MY ONE AND ONLY MERY!
+                  </p>
                   <p className="font-display text-lg italic text-ink/80">
                     Today is all about you, my love. Happy birthday — I love you
                     more than words could ever properly say.
@@ -325,7 +336,7 @@ function Index() {
                 <Polaroid
                   src={photoHarbor.url}
                   alt="A selfie in a baseball cap in front of a Neptune statue at the harbor"
-                  caption="Poseidon's biggest fan"
+                  caption="MY FAV EYES TO LOOK AT"
                   rotateClass="rotate-[3deg]"
                   delay="0.15s"
                 />
@@ -339,7 +350,7 @@ function Index() {
                 <Polaroid
                   src={photoCamera.url}
                   alt="A playful security-camera photo"
-                  caption="Even the candid moments are perfect"
+                  caption="BIG KISSSESS TO U MY LOVE WISH U AND US ALL THE BEST"
                   rotateClass="rotate-[2deg]"
                   delay="0.45s"
                 />
