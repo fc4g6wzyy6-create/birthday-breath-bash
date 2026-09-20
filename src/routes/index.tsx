@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import cake from "@/assets/cake.png";
-import birthdaySong from "@/assets/birthday-song.mp3";
+import birthdaySong from "@/assets/sweet.mp3.asset.json";
 import photoTrain from "@/assets/train-orig.jpg.asset.json";
 import photoHarbor from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_3.jpeg.asset.json";
 import photoGlasses from "@/assets/WhatsApp_Image_2026-09-16_at_01.31.31_1.jpeg.asset.json";
@@ -52,17 +52,24 @@ function Index() {
   const [muted, setMuted] = useState(false);
 
   const startSong = useCallback(() => {
-    if (audioRef.current) return;
-    const audio = new Audio(birthdaySong);
-    audio.loop = true;
-    audio.volume = 0.35;
-    audioRef.current = audio;
+    let audio = audioRef.current;
+    if (!audio) {
+      audio = new Audio(birthdaySong.url);
+      audio.loop = true;
+      audio.preload = "auto";
+      audio.volume = 0.8;
+      audioRef.current = audio;
+    }
+    if (!audio.paused) return;
     audio.play().catch(() => {});
   }, []);
 
   useEffect(() => {
-    window.addEventListener("pointerdown", startSong, { once: true });
-    return () => window.removeEventListener("pointerdown", startSong);
+    // Try right away; browsers that block it will start on the first touch.
+    startSong();
+    const events = ["pointerdown", "touchstart", "keydown", "click"] as const;
+    events.forEach((e) => window.addEventListener(e, startSong));
+    return () => events.forEach((e) => window.removeEventListener(e, startSong));
   }, [startSong]);
 
   const toggleMute = useCallback(() => {
