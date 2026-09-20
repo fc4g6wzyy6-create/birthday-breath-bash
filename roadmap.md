@@ -1,4 +1,3 @@
 # Roadmap
 
-- [x] Background song on app open — starts on first tap, mute toggle added
-- [ ] Swap in uploaded "Sweet - Cigarettes After Sex" MP3 and raise volume
+- [x] Background song on app open — "Sweet" by Cigarettes After Sex plays from the start, loops, with a mute button
