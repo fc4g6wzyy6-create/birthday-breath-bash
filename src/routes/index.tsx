@@ -57,7 +57,7 @@ function Index() {
       audio = new Audio(birthdaySong.url);
       audio.loop = true;
       audio.preload = "auto";
-      audio.volume = 0.8;
+      audio.volume = 0.4;
       audioRef.current = audio;
     }
     if (!audio.paused) return;
@@ -318,7 +318,7 @@ function Index() {
                 <Polaroid
                   src={photoTrain.url}
                   alt="A candid selfie on the train"
-                  caption="Train rides with you &gt; anywhere"
+                  caption="MOMMYYYYYYYYYYYY IS OLDER THAN ME NOWWWWW 21 21 21"
                   rotateClass="rotate-[-2deg]"
                   delay="0s"
                 />
