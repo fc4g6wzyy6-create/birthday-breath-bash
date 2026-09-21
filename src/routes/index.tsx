@@ -83,11 +83,11 @@ function Index() {
   const celebrate = useCallback(() => {
     stopMic();
     setStage("celebrating");
-  }, [stopMic]);
+    // The song starts only after the wish is made (candles all out).
+    startSong();
+  }, [stopMic, startSong]);
 
   const extinguishOne = useCallback(() => {
-    // The song starts with her first tap or the first detected blow.
-    startSong();
     if (litRef.current <= 0) return;
     const idx = litRef.current - 1;
     litRef.current = idx;
@@ -98,12 +98,11 @@ function Index() {
       return next;
     });
     if (idx === 0) window.setTimeout(celebrate, 1100);
-  }, [celebrate, startSong]);
+  }, [celebrate]);
 
   const startListening = useCallback(async () => {
     if (stage !== "invite") return;
     setStage("listening");
-    startSong();
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
