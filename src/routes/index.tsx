@@ -65,11 +65,12 @@ function Index() {
   }, []);
 
   const toggleMute = useCallback(() => {
+    startSong();
     const audio = audioRef.current;
     if (!audio) return;
     audio.muted = !audio.muted;
     setMuted(audio.muted);
-  }, []);
+  }, [startSong]);
 
   const stopMic = useCallback(() => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -97,11 +98,12 @@ function Index() {
       return next;
     });
     if (idx === 0) window.setTimeout(celebrate, 1100);
-  }, [celebrate]);
+  }, [celebrate, startSong]);
 
   const startListening = useCallback(async () => {
     if (stage !== "invite") return;
     setStage("listening");
+    startSong();
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
