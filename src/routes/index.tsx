@@ -64,20 +64,13 @@ function Index() {
     audio.play().catch(() => {});
   }, []);
 
-  useEffect(() => {
-    // Try right away; browsers that block it will start on the first touch.
-    startSong();
-    const events = ["pointerdown", "touchstart", "keydown", "click"] as const;
-    events.forEach((e) => window.addEventListener(e, startSong));
-    return () => events.forEach((e) => window.removeEventListener(e, startSong));
-  }, [startSong]);
-
   const toggleMute = useCallback(() => {
+    startSong();
     const audio = audioRef.current;
     if (!audio) return;
     audio.muted = !audio.muted;
     setMuted(audio.muted);
-  }, []);
+  }, [startSong]);
 
   const stopMic = useCallback(() => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -93,6 +86,8 @@ function Index() {
   }, [stopMic]);
 
   const extinguishOne = useCallback(() => {
+    // The song starts with her first tap or the first detected blow.
+    startSong();
     if (litRef.current <= 0) return;
     const idx = litRef.current - 1;
     litRef.current = idx;
@@ -103,11 +98,12 @@ function Index() {
       return next;
     });
     if (idx === 0) window.setTimeout(celebrate, 1100);
-  }, [celebrate]);
+  }, [celebrate, startSong]);
 
   const startListening = useCallback(async () => {
     if (stage !== "invite") return;
     setStage("listening");
+    startSong();
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
