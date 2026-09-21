@@ -64,14 +64,6 @@ function Index() {
     audio.play().catch(() => {});
   }, []);
 
-  useEffect(() => {
-    // Try right away; browsers that block it will start on the first touch.
-    startSong();
-    const events = ["pointerdown", "touchstart", "keydown", "click"] as const;
-    events.forEach((e) => window.addEventListener(e, startSong));
-    return () => events.forEach((e) => window.removeEventListener(e, startSong));
-  }, [startSong]);
-
   const toggleMute = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
