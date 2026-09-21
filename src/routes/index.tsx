@@ -284,28 +284,29 @@ function Index() {
                   <p>
                     happy birthday to the most beautiful and amazing girl in
                     theee worlddd ❤️ i hope today reminds u of just how special
-                    u are, . U literallyyyyy make the ordinary moments feel
-                    unforgettable, every laugh, every conversation, every
-                    little adventure and even the quiet moments mean so much
-                    more simply cuz theyre with u. u bring a kind of happiness
-                    into my life that i never knew i was missing.
+                    u are. U literallyyyyy make the ordinary moments feel
+                    unforgettable, evryyyy laugh, everyy conversation, every
+                    little adventure n even the quiet momnts mean so much more
+                    simply cuz theyre with u. u bring a kind of happiness into
+                    my life thaaaaat i never knewww i wassss missiiiiing.
                   </p>
                   <p>
-                    i hope this new year of ur life brings u everything ur
+                    i hoooope this new year offf ur life brings u everything ur
                     heart wishes for, beautiful memories, big dreams coming
-                    true, endless reasons to smile and all the love u deserve.
-                    no matter where life takes us, ill always be grateful that
-                    i get to know u, love u and cheer for u through it all.
+                    true, endless reasons to smile n all the love u desereve.
+                    no matteeeeer wheeeeere liiiiife takes us, ill always be
+                    grateful that i get to know u, love u and cheer for u
+                    through it all.
                   </p>
                   <p>
                     also i'm sooooo frikinnng lucky i am to have u in my life,
-                    u really mean so much to me and im so grateful for
+                    u really mean so much to me and im so grateful foor
                     everything weve been through together. i hope u have the
                     best birthday everrr and that this year brings u everything
-                    u want and deserve. im really happy that i get to be with u
-                    and make all these memories together, and i hope we have a
-                    really good future together and keep growing and being
-                    there for eachother.
+                    u want n deserve. im really happy that i get to be with u
+                    and make all these memories together, n i hope we have a
+                    really good future together n keep growing n being there
+                    for eachother.
                   </p>
                   <p className="font-display text-lg italic text-ink/80">
                     I FRICKING LOVEEEEEEEEEE YOU SOOOO MUCH BABYYYY ❤️❤️❤️ happy
