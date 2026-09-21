@@ -286,40 +286,34 @@ function Index() {
                 </h2>
                 <div className="mx-auto mt-7 max-w-[35ch] space-y-5 text-base leading-8 text-pretty text-ink/70">
                   <p>
-                    Happy birthday to the most beautiful and amazing girl in
-                    my world. I hope today reminds you of just how special you
-                    are, not only to me, but to everyone lucky enough to know
-                    your heart.
+                    happy birthday to the most beautiful and amazing girl in
+                    theee worlddd ❤️ i hope today reminds u of just how special
+                    u are, . U literallyyyyy make the ordinary moments feel
+                    unforgettable, every laugh, every conversation, every
+                    little adventure and even the quiet moments mean so much
+                    more simply cuz theyre with u. u bring a kind of happiness
+                    into my life that i never knew i was missing.
                   </p>
                   <p>
-                    You make the ordinary moments feel unforgettable. Every
-                    laugh, every conversation, every little adventure, and even
-                    the quiet moments mean so much more simply because they are
-                    with you. You bring a kind of happiness into my life that I
-                    never knew I was missing.
+                    i hope this new year of ur life brings u everything ur
+                    heart wishes for, beautiful memories, big dreams coming
+                    true, endless reasons to smile and all the love u deserve.
+                    no matter where life takes us, ill always be grateful that
+                    i get to know u, love u and cheer for u through it all.
                   </p>
                   <p>
-                    I hope this new year of your life brings you everything
-                    your heart wishes for: beautiful memories, big dreams
-                    coming true, endless reasons to smile, and all the love you
-                    deserve. No matter where life takes us, I will always be
-                    grateful that I get to know you, love you, and cheer for
-                    you through it all.
-                  </p>
-                  <p>
-                    I just wanna say how lucky I am to have you in my life. You
-                    really mean so much to me and I'm so grateful for
-                    everything we've been through together. I hope you have the
-                    best birthday ever and that this year brings you everything
-                    you want and deserve. I'm really happy that I get to be
-                    with you and make all these memories together, and I hope
-                    we have a really good future together and keep growing and
-                    being there for each other. I FRICKING LOVEEEEEEEEEE YOU so
-                    much baby, happy birthday TO MY ONE AND ONLY MERY!
+                    also i'm sooooo frikinnng lucky i am to have u in my life,
+                    u really mean so much to me and im so grateful for
+                    everything weve been through together. i hope u have the
+                    best birthday everrr and that this year brings u everything
+                    u want and deserve. im really happy that i get to be with u
+                    and make all these memories together, and i hope we have a
+                    really good future together and keep growing and being
+                    there for eachother.
                   </p>
                   <p className="font-display text-lg italic text-ink/80">
-                    Today is all about you, my love. Happy birthday — I love you
-                    more than words could ever properly say.
+                    I FRICKING LOVEEEEEEEEEE YOU SOOOO MUCH BABYYYY ❤️❤️❤️ happy
+                    birthday TO MY ONE AND ONLY MERY 😭❤️
                   </p>
                 </div>
               </section>
