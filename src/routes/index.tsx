@@ -355,7 +355,7 @@ function Index() {
 
               {/* Signature */}
               <footer className="animate-fade-in-up pb-6 text-center opacity-70">
-                <p className="font-display text-xl italic">Always yours, Aymane</p>
+                <p className="font-display text-xl italic">Always yours, Aymen &lt;3</p>
                 <p className="mt-2 text-[10px] uppercase tracking-[0.25em] text-ink/50">
                   September 22
                 </p>
