@@ -57,7 +57,7 @@ function Index() {
       audio = new Audio(birthdaySong.url);
       audio.loop = true;
       audio.preload = "auto";
-      audio.volume = 0.4;
+      audio.volume = 0.32;
       audioRef.current = audio;
     }
     if (!audio.paused) return;
