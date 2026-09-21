@@ -85,6 +85,8 @@ function Index() {
   }, [stopMic]);
 
   const extinguishOne = useCallback(() => {
+    // The song starts with her first tap or the first detected blow.
+    startSong();
     if (litRef.current <= 0) return;
     const idx = litRef.current - 1;
     litRef.current = idx;
